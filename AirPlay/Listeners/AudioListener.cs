@@ -298,7 +298,7 @@ namespace AirPlay.Listeners
 
 #if DUMP
             /* RAW -> DUMP */
-            File.WriteAllBytes($"/Users/steebono/Desktop/dump/frames/raw_{seqnum}", raw);
+            File.WriteAllBytes($"/Users/mf/Desktop/dump/frames/raw_{seqnum}", raw);
 #endif
             /* RAW -> PCM */
             var length = _decoder.GetOutputStreamLength();
@@ -315,7 +315,7 @@ namespace AirPlay.Listeners
             Console.WriteLine($"RES: {res}");
             Console.WriteLine($"PCM: {output.Length}");
             Console.WriteLine($"LNG: {length}");
-            File.WriteAllBytes($"/Users/steebono/Desktop/dump/pcm/raw_{seqnum}", output);
+            File.WriteAllBytes($"/Users/mf/Desktop/dump/pcm/raw_{seqnum}", output);
 #endif
             Array.Copy(output, 0, entry.AudioBuffer, 0, output.Length);
             entry.AudioBufferLen = output.Length;

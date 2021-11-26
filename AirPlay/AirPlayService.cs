@@ -34,7 +34,7 @@ namespace AirPlay
             {
                 // DO SOMETHING WITH VIDEO DATA..
 #if DUMP
-                using (FileStream _writer = new FileStream("/Users/steebono/Desktop/dump/dump.h264", FileMode.Append))
+                using (FileStream _writer = new FileStream("/Users/mf/Desktop/dump/dump.h264", FileMode.Append))
                 {
                     _writer.Write(e.Data, 0, e.Length);
                 }
@@ -55,13 +55,13 @@ namespace AirPlay
         {
 #if DUMP
             // DUMP WAV AUDIO
-            using (var wr = new FileStream("/Users/steebono/Desktop/dump/dequeued.wav", FileMode.Create))
+            using (var wr = new FileStream("/Users/mf/Desktop/dump/dequeued.wav", FileMode.Create))
             {
                 var header = Utilities.WriteWavHeader(2, 44100, 16, (uint)_audiobuf.Count);
                 wr.Write(header, 0, header.Length);
             }
 
-            using (FileStream _writer = new FileStream("/Users/steebono/Desktop/dump/dequeued.wav", FileMode.Append))
+            using (FileStream _writer = new FileStream("/Users/mf/Desktop/dump/dequeued.wav", FileMode.Append))
             {
                 _writer.Write(_audiobuf.ToArray(), 0, _audiobuf.Count);
             }

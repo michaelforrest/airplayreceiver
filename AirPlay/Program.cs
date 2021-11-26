@@ -64,21 +64,21 @@ namespace AirPlay
 
 #if DUMP
             // Replace '/Users/steebono/Desktop/dump/' in all source codes w/ your path
-            if (!Directory.Exists("/Users/steebono/Desktop/dump/"))
+            if (!Directory.Exists("/Users/mf/Desktop/dump/"))
             {
-                Directory.CreateDirectory("/Users/steebono/Desktop/dump/");
+                Directory.CreateDirectory("/Users/mf/Desktop/dump/");
             }
-            if (!Directory.Exists("/Users/steebono/Desktop/dump/frames/"))
+            if (!Directory.Exists("/Users/mf/Desktop/dump/frames/"))
             {
-                Directory.CreateDirectory("/Users/steebono/Desktop/dump/frames/");
+                Directory.CreateDirectory("/Users/mf/Desktop/dump/frames/");
             }
-            if (!Directory.Exists("/Users/steebono/Desktop/dump/out/"))
+            if (!Directory.Exists("/Users/mf/Desktop/dump/out/"))
             {
-                Directory.CreateDirectory("/Users/steebono/Desktop/dump/out/");
+                Directory.CreateDirectory("/Users/mf/Desktop/dump/out/");
             }
-            if (!Directory.Exists("/Users/steebono/Desktop/dump/pcm/"))
+            if (!Directory.Exists("/Users/mf/Desktop/dump/pcm/"))
             {
-                Directory.CreateDirectory("/Users/steebono/Desktop/dump/pcm/");
+                Directory.CreateDirectory("/Users/mf/Desktop/dump/pcm/");
             }
 #endif
             await builder.RunConsoleAsync();
